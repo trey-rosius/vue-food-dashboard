@@ -1,0 +1,84 @@
+/*------------ Variables -----------*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+$brandprimary: #d96528;
+$brandsecondary: #03c1c1;
+
+:root {
+  --body-font: "Inter", sans-serif;
+    --delay: 0s;
+    --color: #243746;
+    --color-primary: #158876;
+    --color-secondary: #0e2233;
+    --bg: #f3f5f4;
+    --button-bg: #353340;
+    --bg-secondary: #fff;
+    --border-color: #ddd;
+    --body-color: #808191;
+
+    --svg-background-color-1:#ff7551;
+    --svg-background-color-2:#32a7e2;
+    --svg-background-color-3:#6c5ecf;
+  }
+  
+  .dark-mode {
+    --color: #ebf4f1;
+    --color-primary: #41b38a;
+    --color-secondary: #fdf9f3;
+    --bg: #091a28;
+    --button-bg: #353340;
+    --bg-secondary: #071521;
+    --border-color: #0d2538;
+  }
+  .sepia-mode {
+    --color: #433422;
+    --color-secondary: #504231;
+    --bg: #f1e7d0;
+    --button-bg: #353340;
+    --bg-secondary: #eae0c9;
+    --border-color: #ded0bf;
+  }
+
+/*------------  Global   -----------*/
+
+body {
+
+  min-height: 100vh;
+
+ 
+  font-size: 16px;
+ 
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  background-color: var(--bg);
+  color: var(--color);
+  transition: background-color 0.3s;
+  font-family: var(--body-font);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a,
+a:active,
+a:visited {
+  color: $brandprimary;
+  text-decoration: none;
+  transition: 0.3s all ease;
+}
+
