@@ -1,20 +1,50 @@
 <template>
-    <div>
-      <div class="orders">
+    <div class="orders">
+      <div v-for="order in orders" :key="order">
+
           <div class="orders__card">
          <div class="top">
              <div class="order-details">
                  <div class="order-details__num">
-                     Order #351
+                     Order {{order.order_no}}
                  </div>
                  <div class="order-details__date">
-                     23 FEb 2021,08:30PM
+                     {{order.order_date}}
                  </div>
              </div>
-             <img src="" alt="" class="profile-pic">
+             <img :src="order.ordered_by" alt="" class="profile-pic">
+         </div>
+        
+             <div class="items">
+                 <div v-for="item in order.items" :key="item">
+                     <div class="item">
+                         <img :src="item.pic" alt="" class="item__pic">
+                         <div class="item__details">
+                             <div class="item__name">
+                                 {{item.name}}
+                             </div>
+                             <div class="item__desc">
+                                 {{item.desc}}
+                             </div>
+                             <div class="item__details1">
+                           <div class="item__price">
+                               {{item.price}}
+
+                           </div>
+                           <div class="item__qty">
+                               Qty:{{item.qty}}
+                           </div>
+                           
+                             </div>
+                             <div class="line"></div>
+                         </div>
+                     </div>
+                     
+           
          </div>
 
           </div>
+      </div>
       </div>
     </div>
 </template>
@@ -24,17 +54,17 @@
         data(){
             return{
                 orders:[
-    {
+                    {
         "order_no": "#6753",
         "order_date":"12 jan 2021, 08:28pm",
         "ordered_by":"https://rosius.s3.us-east-2.amazonaws.com/cropped_rosius.png",
-        "total":"$26.4",
+        "total":"$26.40",
         "items":[
             {
                 "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal1+(1).jpg",
                 "name":"Vegetable Mixups",
                 "desc":"Vegetable Fritters with Egg",
-                "price":"$10.2",
+                "price":"$10.20",
                 "qty":3
 
             },
@@ -42,7 +72,103 @@
                 "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal2+(1).jpeg",
                 "name":"Chicken Mixed Salad",
                 "desc":"Roasted Chicken, mixed with salad",
-                "price":"$16.2",
+                "price":"$16.20",
+                "qty":2
+
+            }
+        ]
+    },
+                    {
+        "order_no": "#6753",
+        "order_date":"12 jan 2021, 08:28pm",
+        "ordered_by":"https://rosius.s3.us-east-2.amazonaws.com/cropped_rosius.png",
+        "total":"$26.40",
+        "items":[
+            {
+                "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal1+(1).jpg",
+                "name":"Vegetable Mixups",
+                "desc":"Vegetable Fritters with Egg",
+                "price":"$10.20",
+                "qty":3
+
+            },
+            {
+                "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal2+(1).jpeg",
+                "name":"Chicken Mixed Salad",
+                "desc":"Roasted Chicken, mixed with salad",
+                "price":"$16.20",
+                "qty":2
+
+            }
+        ]
+    },
+                    {
+        "order_no": "#6753",
+        "order_date":"12 jan 2021, 08:28pm",
+        "ordered_by":"https://rosius.s3.us-east-2.amazonaws.com/cropped_rosius.png",
+        "total":"$26.40",
+        "items":[
+            {
+                "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal1+(1).jpg",
+                "name":"Vegetable Mixups",
+                "desc":"Vegetable Fritters with Egg",
+                "price":"$10.20",
+                "qty":3
+
+            },
+            {
+                "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal2+(1).jpeg",
+                "name":"Chicken Mixed Salad",
+                "desc":"Roasted Chicken, mixed with salad",
+                "price":"$16.20",
+                "qty":2
+
+            }
+        ]
+    },
+                    {
+        "order_no": "#6753",
+        "order_date":"12 jan 2021, 08:28pm",
+        "ordered_by":"https://rosius.s3.us-east-2.amazonaws.com/cropped_rosius.png",
+        "total":"$26.40",
+        "items":[
+            {
+                "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal1+(1).jpg",
+                "name":"Vegetable Mixups",
+                "desc":"Vegetable Fritters with Egg",
+                "price":"$10.20",
+                "qty":3
+
+            },
+            {
+                "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal2+(1).jpeg",
+                "name":"Chicken Mixed Salad",
+                "desc":"Roasted Chicken, mixed with salad",
+                "price":"$16.20",
+                "qty":2
+
+            }
+        ]
+    },
+    {
+        "order_no": "#6753",
+        "order_date":"12 jan 2021, 08:28pm",
+        "ordered_by":"https://rosius.s3.us-east-2.amazonaws.com/cropped_rosius.png",
+        "total":"$26.40",
+        "items":[
+            {
+                "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal1+(1).jpg",
+                "name":"Vegetable Mixups",
+                "desc":"Vegetable Fritters with Egg",
+                "price":"$10.20",
+                "qty":3
+
+            },
+            {
+                "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal2+(1).jpeg",
+                "name":"Chicken Mixed Salad",
+                "desc":"Roasted Chicken, mixed with salad",
+                "price":"$16.20",
                 "qty":2
 
             }
@@ -52,13 +178,13 @@
         "order_no": "#7253",
         "order_date":"12 jan 2021, 08:28pm",
         "ordered_by":"https://rosius.s3.us-east-2.amazonaws.com/cropped_rosius.png",
-        "total":"$40.4",
+        "total":"$40.40",
         "items":[
             {
                 "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal3+(1).jpeg",
                 "name":"Vegetable Mixups",
                 "desc":"Vegetable Fritters with Egg",
-                "price":"$15.2",
+                "price":"$15.20",
                 "qty":1
 
             },
@@ -66,7 +192,7 @@
                 "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal4+(1).jpeg",
                 "name":"Chicken Mixed Salad",
                 "desc":"Roasted Chicken, mixed with salad",
-                "price":"$25.2",
+                "price":"$25.20",
                 "qty":2
 
             }
@@ -76,13 +202,13 @@
         "order_no": "#6753",
         "order_date":"12 jan 2021, 08:28pm",
         "ordered_by":"https://rosius.s3.us-east-2.amazonaws.com/cropped_rosius.png",
-        "total":"$26.4",
+        "total":"$26.40",
         "items":[
             {
                 "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal1+(1).jpg",
                 "name":"Vegetable Mixups",
                 "desc":"Vegetable Fritters with Egg",
-                "price":"$10.2",
+                "price":"$10.20",
                 "qty":5
 
             },
@@ -90,7 +216,7 @@
                 "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal4+(1).jpeg",
                 "name":"Chicken Mixed Salad",
                 "desc":"Roasted Chicken, mixed with salad",
-                "price":"$16.2",
+                "price":"$16.20",
                 "qty":2
 
             }
@@ -100,13 +226,13 @@
         "order_no": "#6753",
         "order_date":"12 jan 2021, 08:28pm",
         "ordered_by":"https://rosius.s3.us-east-2.amazonaws.com/cropped_rosius.png",
-        "total":"$26.4",
+        "total":"$26.40",
         "items":[
             {
                 "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal4+(1).jpeg",
                 "name":"Vegetable Mixups",
                 "desc":"Vegetable Fritters with Egg",
-                "price":"$10.2",
+                "price":"$10.20",
                 "qty":3
 
             },
@@ -114,7 +240,7 @@
                 "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal2+(1).jpeg",
                 "name":"Chicken Mixed Salad",
                 "desc":"Roasted Chicken, mixed with salad",
-                "price":"$16.2",
+                "price":"$16.20",
                 "qty":2
 
             }
@@ -124,13 +250,13 @@
         "order_no": "#6753",
         "order_date":"12 jan 2021, 08:28pm",
         "ordered_by":"https://rosius.s3.us-east-2.amazonaws.com/cropped_rosius.png",
-        "total":"$26.4",
+        "total":"$26.40",
         "items":[
             {
                 "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal1+(1).jpg",
                 "name":"Vegetable Mixups",
                 "desc":"Vegetable Fritters with Egg",
-                "price":"$10.2",
+                "price":"$10.20",
                 "qty":3
 
             },
@@ -138,7 +264,7 @@
                 "pic":"https://rosius.s3.us-east-2.amazonaws.com/meal2+(1).jpeg",
                 "name":"Chicken Mixed Salad",
                 "desc":"Roasted Chicken, mixed with salad",
-                "price":"$16.2",
+                "price":"$16.20",
                 "qty":2
 
             }
@@ -151,5 +277,119 @@
 </script>
 
 <style lang="scss" scoped>
+.orders{
+    display: flex;
+    flex-direction: row;
+ 
 
+    flex-wrap: wrap;
+    
+
+    &__card{
+display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    width: 250px;
+    border-radius: 10px;
+    transition: transform .3s;
+    background-color: var(--color);
+    //scale up and animate
+    &:hover{
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+   
+    }
+
+}
+.top{
+      display: flex;
+      justify-content: space-between;
+    
+}
+.order-details{
+display: flex;
+    flex-direction: column;
+
+    &__num{
+     font-weight: bold;
+     font-size: 14px;
+     color:var(--bg);
+    }
+    &__date{
+     color: grey;
+     font-size: 12px;
+
+    }
+}
+.profile-pic{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.items{
+
+    margin-top: 20px;
+    margin-left: 40px;
+display: flex;
+flex-direction: column;
+&:not(:last-child){
+    margin-top: 300px;
+}
+
+   
+
+}
+
+.item{
+    display: flex;
+    margin:10px 0px;
+
+
+&__pic{
+width: 60px;
+height: 60px;
+object-fit: cover;
+border-radius: 100%;
+}
+&__name{
+    font-size: 12px;
+    color: var(--bg);
+}
+&__details{
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 10px;
+
+}
+&__desc{
+    font-size: 10px;
+    color:grey;
+
+}
+&__details1{
+    display: flex;
+    justify-content: space-between;
+
+   
+}
+ &__price{
+        font-size: 12px;
+        font-weight: bold;
+        color: var(--bg);
+    }
+     &__qty{
+        font-size: 12px;
+        font-weight: bold;
+        color: var(--bg);
+    }
+}
+.line{
+    margin-top: 10px;
+    width: 100%;
+    background-color: var(--color-primary);
+    height: 1px;
+}
 </style>

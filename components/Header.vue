@@ -36,6 +36,11 @@
  align-items: center;
  flex-shrink: 0;
  padding: 30px;
+ 
+ 
+
+
+
 }
 
 .search-bar {

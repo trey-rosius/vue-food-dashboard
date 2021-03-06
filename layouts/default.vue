@@ -1,10 +1,11 @@
 <template>
   <div>
    
-<div class="wavy">
+
+       <Nuxt />
+       <div class="wavy">
         <Wave/>
       </div>
-       <Nuxt />
   </div>
 </template>
 

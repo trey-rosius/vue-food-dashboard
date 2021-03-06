@@ -1,12 +1,15 @@
 <template>
   <div class="container">
       
-    <LeftMenu/>
+   
+      <LeftMenu/>
+    
   
     <div class="right">
   
     <Header/>
       <OrderList/>
+      <Order/>
     </div>
       
     
@@ -34,6 +37,9 @@ min-height: 100vh;
 
 .right{
   flex: 1;
+  z-index: 10;
+  position: relative;
+  margin-left: 15%;
  
  
 }
