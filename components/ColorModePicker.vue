@@ -10,6 +10,7 @@
        :class="getClasses(color)"/>
       </li>
     </ul>
+    <!--
     <ColorScheme placeholder="..." tag="span">
   Color mode: <b>{{ $colorMode.preference }}</b>
 
@@ -17,6 +18,7 @@
     >(<i>{{ $colorMode.value }}</i> mode detected)</span
   >
 </ColorScheme>
+-->
     </div>
 </template>
 

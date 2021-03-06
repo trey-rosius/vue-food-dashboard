@@ -4,7 +4,9 @@
     <LeftMenu/>
   
     <div class="right">
-    <ColorModePicker/>
+  
+    <Header/>
+      
     </div>
       
     
