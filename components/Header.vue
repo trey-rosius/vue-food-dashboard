@@ -59,7 +59,7 @@
   background-size: 14px;
   background-repeat: no-repeat;
   background-position: 96%;
-  color: #fff;
+  color: var(--color-primary);
  }
 }
 .mode{
@@ -106,14 +106,15 @@
   }
  }
  &-img {
-  width: 30px;
-  height: 30px;
+  width: 33px;
+  height: 33px;
   flex-shrink: 0;
+ 
   object-fit: cover;
   border-radius: 100%;
  }
  &-name {
-  color: var(--color);
+ 
   font-size: 14px;
   margin: 0 6px 0 12px;
   @media screen and (max-width: 575px) {
