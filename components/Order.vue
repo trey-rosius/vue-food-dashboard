@@ -44,6 +44,7 @@
          </div>
 
           </div>
+          <div class="line1"></div>
       </div>
       </div>
     </div>
@@ -335,9 +336,7 @@ display: flex;
     margin-left: 40px;
 display: flex;
 flex-direction: column;
-&:not(:last-child){
-    margin-top: 300px;
-}
+
 
    
 
@@ -391,5 +390,12 @@ border-radius: 100%;
     width: 100%;
     background-color: var(--color-primary);
     height: 1px;
+}
+.line1{
+    margin-top: 10px;
+    
+    background-color: var(--color-primary);
+    height: 1px;
+
 }
 </style>
