@@ -25,7 +25,7 @@ export const actions ={
                     headers:{
                     "Content-Type":"application/json",
 
-                    "x-api-key":"8ZvY9h9IVx4r7501GZ5Ep6DNOFih5Hkr7183q7br"
+                    "x-api-key":process.env.AWS_API_KEY
                     }
                 }
                
