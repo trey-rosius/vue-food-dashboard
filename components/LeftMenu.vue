@@ -82,8 +82,8 @@ z-index: 10;
     .logo {
       display: none;
   
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: #22b07d;
   flex-shrink: 0;
 
@@ -110,7 +110,7 @@ z-index: 10;
     height: 70px;
     z-index: -1;
    }
-     @media screen and (max-width: 475px) {
+     @media screen and (max-width: 575px) {
      display: none;
   }
   }
@@ -217,7 +217,7 @@ z-index: 10;
   transform: none;
  }
 }
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 575px) {
  
  .sidebar{
    align-items: center;
