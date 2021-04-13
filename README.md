@@ -1,6 +1,19 @@
 # food-dashboard
 ## LIVE DEMO https://eloquent-mestorf-134416.netlify.app/
 
+A serverless JAMSTACK application built with AWS and Vue/Nuxt.
+Actually, it's just a sample application, show casing the speed at which anybody can build full stack applications using Vue/Nuxt and AWS. 
+Here's a link to the complete blog post describing how this application was built.
+
+https://phatrabbitapps.com/how-to-build-serverless-jamstack-apps-with-aws-vuenuxt-and-netlify-part-1
+
+https://phatrabbitapps.com/how-to-build-serverless-jamstack-apps-with-aws-vuenuxt-and-netlify-part-2
+
+AWS Services used
+- [x] Lambda
+- [x] Api gateway
+- [x] Dynamo DB
+
 ## Build Setup
 
 ```bash
